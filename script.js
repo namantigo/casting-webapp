@@ -15,3 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
   
+document.addEventListener("DOMContentLoaded", () => {
+  const saveBtn = document.getElementById("saveBtn");
+  if (saveBtn) {
+    saveBtn.addEventListener("click", () => {
+      Telegram.WebApp.showAlert("Анкета сохранена (пока только визуально)");
+    });
+  }
+});
