@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Анкета актёра</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Создать анкету</h2>
+    <form>
+      <input type="text" placeholder="Имя" required>
+      <input type="number" placeholder="Возраст" required>
+      <input type="text" placeholder="Город">
+      <input type="text" placeholder="Рост (см)">
+      <input type="text" placeholder="Вес (кг)">
+      <textarea placeholder="Образование (школа, курсы, ВУЗ)"></textarea>
+      <textarea placeholder="Опыт (съёмки, реклама, сериалы)"></textarea>
+      <textarea placeholder="Проекты (название, роль, год)"></textarea>
+      <label>Фото:</label>
+      <input type="file" accept="image/*" multiple>
+      <label>Видео:</label>
+      <input type="file" accept="video/*">
+      <button type="submit">Сохранить</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
