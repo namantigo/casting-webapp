@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Фото и Видео</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Добавь фото и видео</h2>
+    
+    <label>Фото (можно несколько):</label>
+    <input type="file" accept="image/*" multiple><br><br>
+
+    <label>Видео (один файл):</label>
+    <input type="file" accept="video/*"><br><br>
+
+    <button>Сохранить</button>
+  </div>
+</body>
+</html>
