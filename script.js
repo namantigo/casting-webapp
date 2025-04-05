@@ -23,3 +23,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const createBtn = document.getElementById("createCastingBtn");
+  const viewBtn = document.getElementById("viewProfilesBtn");
+  const sendBtn = document.getElementById("sendBroadcastBtn");
+
+  if (createBtn) {
+    createBtn.addEventListener("click", () => {
+      Telegram.WebApp.showAlert("Кастинг создан (временно без сохранения)");
+    });
+  }
+
+  if (viewBtn) {
+    viewBtn.addEventListener("click", () => {
+      Telegram.WebApp.showAlert("Анкеты актёров будут здесь позже");
+    });
+  }
+
+  if (sendBtn) {
+    sendBtn.addEventListener("click", () => {
+      Telegram.WebApp.showAlert("Рассылка кастинга отправлена (пока фейк)");
+    });
+  }
+});
