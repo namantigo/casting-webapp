@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Автопрокрутка вниз при выходе из полей ввода
+  // Автопрокрутка вниз при уходе из поля
   const inputs = document.querySelectorAll("input, textarea");
   inputs.forEach(el => {
     el.addEventListener("blur", () => {
@@ -18,6 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }, 100);
     });
+  });
+
+  // Скрытие клавиатуры при тапе вне поля
+  document.body.addEventListener("click", (e) => {
+    if (!e.target.closest("input") && !e.target.closest("textarea")) {
+      inputs.forEach(el => el.blur());
+    }
   });
 });
   
