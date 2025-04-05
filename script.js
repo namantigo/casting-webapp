@@ -1,30 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Выделение .selectable
-  const items = document.querySelectorAll(".selectable");
-  items.forEach(item => {
-    item.addEventListener("click", () => {
-      item.classList.toggle("selected");
+  const buttons = document.querySelectorAll(".apply-btn");
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      alert("Вы откликнулись на кастинг!");
+      // позже сделаем отправку на сервер
     });
   });
 
-  // Автопрокрутка вниз при уходе из поля
-  const inputs = document.querySelectorAll("input, textarea");
-  inputs.forEach(el => {
-    el.addEventListener("blur", () => {
-      setTimeout(() => {
-        window.scrollTo({
-          top: document.body.scrollHeight,
-          behavior: 'smooth'
-        });
-      }, 100);
-    });
-  });
-
-  // Скрытие клавиатуры при тапе вне поля
-  document.body.addEventListener("click", (e) => {
-    if (!e.target.closest("input") && !e.target.closest("textarea")) {
-      inputs.forEach(el => el.blur());
-    }
-  });
+  // Получение данных Telegram-пользователя
+  if (window.Telegram && Telegram.WebApp) {
+    Telegram.WebApp.expand(); // разворачивает WebApp на весь экран
+    const user = Telegram.WebApp.initDataUnsafe?.user;
+    console.log("Telegram User:", user);
+  }
 });
   
